@@ -37,8 +37,9 @@ if choice == 'VID':
 
 elif choice == 'PIC':
     img = cv.imread('cv_pics/cat2.jpg')
+    img_rescaled = rescaleFrame(img, 0.3)
     cv.imshow('Look at this oversized cat!', img)
-    print(img)
+    cv.imshow('Look at this purr-fectly sized cat :)', img_rescaled)
     cv.waitKey(0)
 
 
